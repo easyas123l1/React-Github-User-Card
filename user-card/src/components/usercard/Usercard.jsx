@@ -8,7 +8,7 @@ class Usercard extends Component {
   render() {
     return (
       <div>
-        <img />
+        <img src={this.props.user.avatar_url} />
         <div>
           <h3>Name: {this.props.user.name}</h3>
           <p>Username: {this.props.user.login}</p>

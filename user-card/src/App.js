@@ -26,6 +26,7 @@ class App extends Component {
         axios.get(friend.url)
         .then(results4 => {
           this.setState({ friends: [...this.state.friends, results4.data]})
+          console.log(this.state.friends);
         })
       })
     }) 
@@ -38,7 +39,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>My Github:<span role='img' >❤️</span>'s</h1>
-        <Usercard />
+        <Usercard user={this.state.user}/>
+        <h1>Friends!</h1>
       </div>
     );
   }

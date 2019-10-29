@@ -3,15 +3,21 @@ import React, { Component } from 'react';
 class Usercard extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    }
   }
 
   render() {
     return (
       <div>
-        <h1>Hello from inside Usercard!</h1>
+        <img />
+        <div>
+          <h3>Name: {this.props.user.name}</h3>
+          <p>Username: {this.props.user.login}</p>
+          <p>Location: {this.props.user.location}</p>
+          <p>Profile: <a href={this.props.user.html_url}>{this.props.user.html_url}</a></p>
+          <p>Followers: {this.props.user.followers}</p>
+          <p>Following: {this.props.user.following}</p>
+          <p>Bio: {this.props.user.bio}</p>
+        </div>
       </div>
     )
   }

@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>My Github:<span role='img' >❤️</span>'s</h1>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>My Github:<span role='img' >❤️</span>'s</h1>
+      </div>
+    );
+  }
 }
 
 export default App;

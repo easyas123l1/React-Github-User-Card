@@ -67,7 +67,7 @@ class App extends Component {
           />
           <button>Search</button>
         </form>
-        {this.state.user === {} ? <p>This github handle doesn't exist!</p>
+        {Object.entries(this.state.user).length === 0 ? <p>This github handle doesn't exist!</p>
         :
         <div>
           <Usercard user={this.state.user}/>

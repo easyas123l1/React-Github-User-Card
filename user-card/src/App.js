@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Usercard from './components/usercard/Usercard';
 import axios from 'axios';
 import './App.css';
+import githublogo from './assets/githublogo.png';
+import lambdalogo from './assets/lambdalogo.png';
 
 class App extends Component {
   constructor(props) {
@@ -54,9 +56,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <img src='../assets/lambdalogo.png' /> */}
+        <img src={lambdalogo} alt='lambda'/>
         <h1>Github:</h1>
-        {/* <img src='../assets/githublogo.png' /> */}
+        <img src={githublogo} alt='github' />
         <form className='form'
           onSubmit={this.handleSubmit}>
           <label htmlFor='profile'>Search Github:</label>

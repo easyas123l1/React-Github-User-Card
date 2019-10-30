@@ -7,11 +7,11 @@ class Usercard extends Component {
 
   render() {
     return (
-      <div>
+      <div className='card'>
         <img src={this.props.user.avatar_url} />
-        <div>
-          <h3>Name: {this.props.user.name}</h3>
-          <p>Username: {this.props.user.login}</p>
+        <div className='card-info'>
+          <h3 className='name'>Name: {this.props.user.name}</h3>
+          <p className='username'>Username: {this.props.user.login}</p>
           <p>Location: {this.props.user.location}</p>
           <p>Profile: <a href={this.props.user.html_url}>{this.props.user.html_url}</a></p>
           <p>Followers: {this.props.user.followers}</p>

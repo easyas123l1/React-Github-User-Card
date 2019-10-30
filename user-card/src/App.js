@@ -54,10 +54,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img src='../assets/lambdalogo.png' />
+        {/* <img src='../assets/lambdalogo.png' /> */}
         <h1>Github:</h1>
-        <img src='../assets/githublogo.png' />
-        <form onSubmit={this.handleSubmit}>
+        {/* <img src='../assets/githublogo.png' /> */}
+        <form className='form'
+          onSubmit={this.handleSubmit}>
           <label htmlFor='profile'>Search Github:</label>
           <input type='text'
           name='profile'
@@ -66,7 +67,7 @@ class App extends Component {
           />
           <button>Search</button>
         </form>
-        {this.state.user ? <p>This github handle doesn't exist!</p>
+        {!this.state.user ? <p>This github handle doesn't exist!</p>
         :
         <div>
           <Usercard user={this.state.user}/>

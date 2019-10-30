@@ -67,11 +67,11 @@ class App extends Component {
           />
           <button>Search</button>
         </form>
-        {!this.state.user ? <p>This github handle doesn't exist!</p>
+        {this.state.user === {} ? <p>This github handle doesn't exist!</p>
         :
         <div>
           <Usercard user={this.state.user}/>
-          <h1>Friends <span role='img' >❤️</span>!!!</h1>
+          <h1>Friends <span aria-label='heart' role='img' >❤️</span>!!!</h1>
         </div>
         }
         {this.state.friends.map(friend => (
